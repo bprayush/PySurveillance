@@ -18,11 +18,12 @@ def cam_capture():
 
 
 def drive_upload():
-    connection = False
     print("inside drive_upload")
     while True:
         print("waiting inside drive_upload")
-        time.sleep(30*60)
+        # time.sleep(30*60)
+        time.sleep(120)
+        connection = False
         print("waiting finished")
         while not connection:
             try:
@@ -33,7 +34,7 @@ def drive_upload():
             except:
                 print("Connection error")
                 connection = False
-                time.sleep(120)
+                time.sleep(10)
 
 
 if __name__ == "__main__":

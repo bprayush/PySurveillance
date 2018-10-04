@@ -42,7 +42,9 @@ class Drive:
         return self.queue[0]
 
     def enQueue(self, file):
+        print("Adding to upload list")
         self.queue.append(file)
+        print(self.queue)
 
     def deQueue(self):
         self.queue.pop(0)
