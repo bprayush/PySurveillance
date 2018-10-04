@@ -1,3 +1,4 @@
+#! /usr/bin/python3
 from drive import Drive
 from capture import Capture
 from threading import Thread
