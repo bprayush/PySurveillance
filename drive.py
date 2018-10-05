@@ -11,6 +11,7 @@ class Drive:
     folderId = "1Axb2yk26lcL5BOncsRAwQKfGdL1YLN0I"
     uploadKind = "drive#childList"
     queue = []
+    uploadedFiles = []
 
     def authenticate(self):
         self.gauth = GoogleAuth()
@@ -34,6 +35,7 @@ class Drive:
 
             if newFile.uploaded:
                 print("Uploaded")
+                self.uploaded(self.top())
                 self.deQueue()
             else:
                 print("Not Uploaded")
@@ -54,4 +56,15 @@ class Drive:
 
     def getFileName(self):
         return str(datetime.now()) + '.avi'
+
+    def uploaded(self, file):
+        self.uploadedFiles.append(file)
+
+    def delete(self):
+        for file in self.uploadedFiles:
+            os.remove(self.path + file)
+
+        self.uploadedFiles = []
+
+
 
