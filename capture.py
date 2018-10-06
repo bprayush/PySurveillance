@@ -7,7 +7,7 @@ class Capture:
     first = True
     filePath = "videos/"
     length = 1
-    fps = 30.0
+    fps = 60.0
     width = 640
     height = 480
     startTime = 0
