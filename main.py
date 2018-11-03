@@ -35,6 +35,7 @@ def drive_upload():
                 print("Connection error")
                 connection = False
                 time.sleep(10)
+        appDrive.delete()
 
 
 if __name__ == "__main__":

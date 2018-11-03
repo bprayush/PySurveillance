@@ -6,10 +6,10 @@ class Capture:
     flag = True
     first = True
     filePath = "videos/"
-    length = 1
+    length = 5
     fps = 60.0
-    width = 640
-    height = 480
+    width = 320
+    height = 240
     startTime = 0
     endTime = 0
     recording = False

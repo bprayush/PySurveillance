@@ -63,6 +63,7 @@ class Drive:
     def delete(self):
         for file in self.uploadedFiles:
             os.remove(self.path + file)
+            print("Deleting file ...")
 
         self.uploadedFiles = []
 
