@@ -62,9 +62,9 @@ class Drive:
         self.uploadedFiles.append(file)
 
     def delete(self):
-        for file in self.uploadedFiles:
-            os.remove(self.path + file)
-            print("Deleting file ...")
+        # for file in self.uploadedFiles:
+        #     os.remove(self.path + file)
+        #     print("Deleting file ...")
 
         self.uploadedFiles = []
 
