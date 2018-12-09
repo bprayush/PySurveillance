@@ -36,8 +36,8 @@ def drive_upload():
                 appDrive.uploadFile()
                 connection = True
                 print("Upload success")
-            except:
-                print("Connection error")
+            except Exception as e:
+                print(e)
                 connection = False
                 time.sleep(10)
         # appDrive.delete()
