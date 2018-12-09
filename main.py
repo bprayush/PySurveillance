@@ -6,7 +6,7 @@ import time
 
 capture = Capture()
 appDrive = Drive()
-
+path = ""
 
 def cam_capture():
     while True:
@@ -15,13 +15,16 @@ def cam_capture():
             print("Capture")
             filename = capture.captureVid()
             appDrive.enQueue(filename)
-
+        global path
+        path = capture.filePath
         print("Working...")
 
 
 def drive_upload():
     print("inside drive_upload")
     while True:
+        global path
+        appDrive.path = path
         print("waiting inside drive_upload")
         # time.sleep(30*60)
         time.sleep(120)

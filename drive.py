@@ -7,7 +7,8 @@ import os
 class Drive:
     gauth = []
     drive = []
-    path = "videos/"
+    rootPath = "videos/"
+    path = ""
     folderId = "1Axb2yk26lcL5BOncsRAwQKfGdL1YLN0I"
     uploadKind = "drive#childList"
     queue = []
@@ -66,6 +67,9 @@ class Drive:
             print("Deleting file ...")
 
         self.uploadedFiles = []
+
+    def setPath(self, path):
+        self.path = path
 
 
 
