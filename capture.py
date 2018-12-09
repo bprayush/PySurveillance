@@ -24,7 +24,7 @@ class Capture:
         cap.set(cv2.CAP_PROP_FRAME_WIDTH, self.width)
         cap.set(cv2.CAP_PROP_FRAME_HEIGHT, self.height)
         fourcc = cv2.VideoWriter_fourcc(*'XVID')
-        name = str(datetime.datetime.now().strftime("%H-%M")) + '.avi'
+        name = str(datetime.datetime.now().strftime("%d-%B-%Y %H-%M")) + '.avi'
         full_path = self.filePath + name
         out = cv2.VideoWriter(full_path, fourcc, self.fps, (self.width, self.height))
         font = cv2.FONT_HERSHEY_SIMPLEX
