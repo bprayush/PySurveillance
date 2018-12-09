@@ -1,11 +1,13 @@
 import cv2
 import datetime
+import os
 
 
 class Capture:
     flag = True
     first = True
-    filePath = "videos/"
+    fileRoot = "videos/"
+    filePath = ""
     length = 59
     fps = 60.0
     width = 320
@@ -62,3 +64,8 @@ class Capture:
             return True
         else:
             return False
+
+    def setFilePath(self):
+        self.filePath = self.fileRoot + str(datetime.datetime.now().strftime("%d-%B-%Y")) + "/"
+        if not os.path.exists(self.filePath):
+            os.mkdir(self.filePath)

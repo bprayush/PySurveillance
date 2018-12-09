@@ -7,8 +7,10 @@ import time
 capture = Capture()
 appDrive = Drive()
 
+
 def cam_capture():
     while True:
+        capture.setFilePath()
         if capture.captureReady():
             print("Capture")
             filename = capture.captureVid()
@@ -35,7 +37,7 @@ def drive_upload():
                 print("Connection error")
                 connection = False
                 time.sleep(10)
-        appDrive.delete()
+        # appDrive.delete()
 
 
 if __name__ == "__main__":
